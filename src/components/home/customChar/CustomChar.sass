@@ -1,0 +1,58 @@
+@import '../../../variables'
+
+.customchar
+    background-color: #2a313c
+    @include centering
+    flex-wrap: wrap
+    padding: 0 15rem
+    gap: 5%
+
+    &_left
+        display: grid
+        place-content: center
+        width: 40%
+        &-img
+            width: 100%
+            img
+                width: 100%
+                object-fit: cover
+    &_right
+        padding-top: 5%
+        width: 55%
+        &-head
+            &-top
+                display: flex
+                align-items: center
+                padding-bottom: 3%
+                gap: .5rem
+                h3
+                    color: $mainColor
+                    font-weight: 700
+                    font-size: 1rem
+            p
+                color: $textColor
+                font-size: 4rem
+                font-weight: 900
+                line-height: 4.625rem
+                padding-bottom: 5%
+        &-desc
+            color: $helpTextcolor
+            font-size: 1.25rem
+            font-weight: 500
+            line-height: 1.875rem
+            padding-bottom: 5%
+        &-slider
+            width: 77%
+            overflow: hidden
+            position: relative
+            img
+                height: 102px
+                width: 80%
+                object-fit: contain
+            .swiper-wrapper
+                padding: 0 20px
+            .swiper-button-prev, .swiper-button-next
+                display: none
+
+            
+             

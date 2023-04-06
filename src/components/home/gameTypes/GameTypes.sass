@@ -1,0 +1,43 @@
+@import '../../../variables'
+
+.gametypes
+    background-color: #0c0c0c
+    display: flex
+    height: 100vh
+    overflow: hidden
+    flex-wrap: wrap
+    &_left, &_right, &_mid
+        overflow: hidden
+        width: 33.3%
+        height: 100%
+        cursor: pointer
+        position: relative
+        &-desc
+            width: 100%
+            text-align: center
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            z-index: 3
+            font-size: 3rem
+            font-weight: 900
+            color: $textColor
+        &-img
+            width: 100%
+            height: 100%
+            background-position: center
+            background-size: cover
+            transition: 4s ease-in-out
+            &:hover
+                transform: scale(2)
+    &_left-img
+        background-image: url('../../../assets/img/game-types/left.png')
+    &_mid-img
+        background-image: url('../../../assets/img/game-types/mid.png')
+    &_right-img
+        background-image: url('../../../assets/img/game-types/right.png')
+       
+
+
+//transition: all 5s ease-in-out

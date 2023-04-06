@@ -1,0 +1,60 @@
+@import '../../variables'
+
+.basket
+    display: none
+    height: 100vh
+    background-color: #000
+    width: 30%
+    position: fixed
+    top: 0
+    z-index: 1001
+    color: $textColor
+    ul
+        list-style-type: none
+    &_head
+        padding: 5% 15%
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px solid $helpTextcolor
+        p
+            font-size: 2.25rem
+            font-weight: 900
+        button
+            color: $textColor
+            background-color: transparent
+            font-size: 2.25rem
+            cursor: pointer
+            border: none
+    &_product
+        @include centering
+        gap: 2rem
+        padding-top: 5%
+        position: relative
+        cursor: grab
+        &-img
+            width: 110px
+            height: 110px
+            background-color: #2a313c
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+        &-desc
+            width: 50%
+            .name
+                font-size: 1.25rem
+                font-weight: 700
+            .price
+                font-size: 1.25rem
+                font-weight: 700
+                color: $mainColor
+        .trash
+            position: absolute
+            top: 30%
+            right: 5%
+            color: #f05858
+            cursor: pointer
+            z-index: 1
+
+.active
+    display: block
